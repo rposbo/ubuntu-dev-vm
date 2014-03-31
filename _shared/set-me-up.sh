@@ -6,7 +6,6 @@
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 sudo sh -c 'echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" | sudo tee /etc/apt/sources.list.d/mongodb.list'
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-#sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo add-apt-repository ppa:webupd8team/sublime-text-2
 sudo apt-get update -y
 
@@ -17,7 +16,7 @@ sudo apt-get install libexpat1-dev libicu-dev git build-essential curl -y
 sudo apt-get install google-chrome-stable -y
 
 # sublimetext
-sudo apt-get install sublime-text
+sudo apt-get install sublime-text -y
 
 # Install Node from source - the right way!
 # http://www.joyent.com/blog/installing-node-and-npm
