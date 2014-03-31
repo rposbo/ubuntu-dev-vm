@@ -39,35 +39,6 @@ sudo npm install mocha
 # mongo-db
 sudo apt-get install mongodb-10gen
 
-# robomongo
-INSTALL_DIR=$HOME/opt
-TEMP_DIR=$HOME/tmp
-
-#sudo apt-get install -y git qt5-default qt5-qmake scons cmake
-sudo apt-get install scons cmake -y
-
-# Get the source code from Git. Perform a shallow clone to reduce download time.
-mkdir -p $TEMP_DIR
-cd $TEMP_DIR
-sudo git clone --depth 1 https://github.com/paralect/robomongo.git
-
-# Compile the source.
-sudo mkdir -p robomongo/target
-cd robomongo/target
-sudo cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR
-make
-make install
-
-# As of the time of this writing, the Robomongo makefile doesn't actually
-# install into the specified install prefix, so we have to install it manually.
-mkdir -p $INSTALL_DIR
-mv install $INSTALL_DIR/robomongo
-mkdir -p $HOME/bin
-ln -s $INSTALL_DIR/robomongo/bin/robomongo.sh $HOME/bin/robomongo
-
-# Clean up.
-rm -rf $TEMP_DIR/robomongo
-
 # The biggie - desktop
 sudo apt-get install ubuntu-desktop
 # need to set up a non-vagrant user
