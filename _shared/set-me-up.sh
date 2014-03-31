@@ -39,5 +39,5 @@ sudo npm install mocha
 sudo apt-get install mongodb-10gen
 
 # The biggie - desktop
-sudo apt-get install ubuntu-desktop
+sudo apt-get install ubuntu-desktop -y
 # need to set up a non-vagrant user
